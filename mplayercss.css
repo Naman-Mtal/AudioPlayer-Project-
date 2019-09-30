@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.curr {
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    margin-top: 85vh;
+    background-color: black;
+
+}
+
+.thumbnail {
+    margin-top: 1vh;
+    float: left;
+    height: 13vh;
+    width: 13vh;
+    margin-left: 5px;
+    background-image: url(images/khalbaliI.jpg);
+    background-size: cover;
+    border-color: black;
+}
+
+.sname {
+    float: left;
+    margin-left: 5px;
+    line-height: 15vh;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+i {
+
+    float: left;
+    margin-left: 50px;
+    color: white;
+    margin-top: 40px;
+    transition: 0.5s;
+    width: 20px;
+    cursor: pointer;
+}
+
+#svalue {
+
+    float: left;
+    margin-left: 5px;
+    color: white;
+    margin-top: 41px;
+    transition: 0.5s;
+    width: 20px;
+    cursor: pointer;
+}
+#prev:hover
+{
+    color: blue;
+}
+#next:hover
+{
+    color: blue;
+}
+#volume {}
+
+#rep {}
+
+/*rep:hover
+{
+    color: green;
+}*/
+#play:hover {
+    color: blue;
+    /*transform: scale(1.2); */
+}
+
+.progressBar {
+
+    float: left;
+    width: 450px;
+
+    margin-top: 35px;
+}
+
+#progress {
+    background-color: dimgray;
+
+
+
+    width: 450px;
+    color: white;
+
+
+    height: 7px;
+}
+
+#current-time,
+#duration {
+    color: white;
+
+}
+
+#duration {
+    float: right;
+}
+
+.volumeslider {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 32.5%;
+    margin-left: 73.5%;
+    width: 170px;
+    height: 50px;
+
+
+    transform: rotate(-90deg);
+}
+
+/*.volumeslider
+{
+    margin-top: 31%;
+    margin-left: 71.5%;
+    z-index: 1;
+    position:absolute;
+    visibility: hidden;
+    height: 150px;
+    width: 20px;
+    border: 1px solid;
+
+}*/
+.slider {
+    -webkit-appearance: none;
+
+    height: 12px;
+    margin-top: 18px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    margin-right: 10%;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border: 1px solid black;
+
+
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.menuBar {
+
+    float: left;
+    height: 85vh;
+    width: 20%;
+    border: 1px solid black;
+    background-color: #282929;
+    color: white;
+    font-size: 20px;
+}
+
+.menuBar p {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.playlist {
+
+    float: left;
+    width: 80%;
+    height: 85vh;
+    background-color: gainsboro;
+
+    overflow: auto;
+}
+
+
+
+
+.playlist h1 {
+    margin-left: 5%;
+
+}
+
+.musicCard:hover
+{
+    transform: scale(1.1);
+
+}
+
+.col {
+    position: fixed;
+    height: 12%;
+    background-color: gainsboro;
+    width: 100%;
+
+    display: block;
+}
+
+.col2 {
+    display: block;
+    margin-top: 10%;
+}
+
+.playlist .musicCard {
+    margin-left: 2%;
+    margin-bottom: 2%;
+    height: 40%;
+    width: 17%;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.playlist ul li {}
+
+.musicCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image {
+
+    height: 170px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+}
+
+.name {
+
+    margin-top: 5%;
+    text-align: center;
+    height: 10%;
+}
+

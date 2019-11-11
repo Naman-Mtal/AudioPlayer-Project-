@@ -4,9 +4,13 @@
     }
 
     body {
-        height: 100%;
+
         font-weight: bold;
         font-family: sans-serif;
+    }
+
+    .helpers {
+        display: none;
     }
 
     .curr {
@@ -17,51 +21,84 @@
         background-color: black;
 
     }
+.songImg
+{
+    float: left;
+    width: 10%;
 
+    height: 15vh;
+}
+    .songBar li
+{
+
+
+   margin-left: 0.1%;;
+    margin-top: 0px;
+  display: inline-flex;
+
+
+}
     .thumbnail {
-        margin-top: 1vh;
-        
-      position: absolute;
-        height: 13vh;
-        width: 13vh;
-        margin-left: 5px;
-        background-image: url(images/khalbaliI.jpg);
-        background-size: cover;
-        border-color: black;
-    }
 
-    .sname {
-      position: absolute;
+      margin-top: 5px;
+
+        height: 13vh;
+        width: 75%;
+        margin-left: 15px;
+        border-radius: 0px;
+        background: url(images/khalbaliI.jpg);
+        background-size: cover;
+
+
+    }
+.currDetails
+{
+
+   float: right;
+    width: 90%;
     
-       left: 110px;
-        line-height: 15vh;
+    height: 15vh;
+
+}
+    .sname {
+        float: left;
+        width: 20%;
+        height: 15vh;
+         line-height: 15vh;
+
         color: white;
         font-size: 20px;
         text-align: center;
         width: 200px;
+
+
     }
 
-.options
-{
-    position: absolute;
-       left: 800px;
-}
+    .options {
+       float: left;
+        height: 15vh;
+        width: 25%;
+
+        line-height: 15vh;
+
+    }
 
 
-    .options  i {
+    .options i {
 
-       
-        display: inline-block;
-        margin: auto 20px;
+
+        display: inline-flex;
+        margin-left: 15%;
         color: white;
-        
+        height: 10px;
+
         transition: 0.5s;
-        width: 20px;
+        width: 5%;
         cursor: pointer;
-         line-height: 15vh;
+
     }
 
-    
+
 
     #prev:hover {
         color: blue;
@@ -73,7 +110,7 @@
 
 
 
-    
+
 
     /*rep:hover
 {
@@ -86,18 +123,28 @@
 
     .progressBar {
 
-        position: absolute;
-        width: 450px;
-        left: 320px;
-         line-height: 15vh;
-    }
+      float: left;
+        width: 30%;
+       height: 15vh;
 
+
+
+    }
+    .minisname
+{
+    position: absolute;
+    color: white;
+    margin-left: 5%;
+    margin-top: 10px;
+    display: none;
+
+}
     #progress {
         background-color: dimgray;
 
-        
 
-        width: 450px;
+margin-top: 7.5vh;
+        width: 100%;
         color: white;
 
 
@@ -107,34 +154,36 @@
     #current-time,
     #duration {
         color: white;
-        position: absolute;
-        top: 15px;
+
+
+      display: inline-block;
+        height: 10px;
     }
 
     #duration {
-      right: 0;
+      float: right;
     }
 
     .volumeSlider {
-        position: absolute;
-      
-        height: 50px;
-        width: 280px;
-        margin-left: 15px;
-        margin-top: 35px;
-        
-        right: 0;
+
+       float: left;
+       height: 15vh;
+       width: 15%;
+
+
+
     }
 
     .volumeSlider i {
-           position: absolute;
+        display: inline-block;
         color: white;
 
-        margin-top: 7px;
+        margin-top: 47px;
     }
 
     .fa-volume-up {
-       right: 10px;
+     float: right;
+        margin-right: 2%;
     }
 
     /*#volume {
@@ -149,12 +198,12 @@
 }*/
     #volume {
 
-            
-        position: absolute;
-        margin-top:10px;
-        margin-left: 30px;
+        display: inline-block;
+       position: absolute;
+        margin-top: 50px;
+        margin-left: 1.5%;
         height: 5px;
-        width: 200px;
+        width: 10%;
         background: #555;
         border-radius: 15px;
     }
@@ -162,7 +211,7 @@
     #volume .ui-slider-range-min {
 
         height: 5px;
-        width: 0px;
+        width: 10%;
         position: absolute;
         background: #2ecc71;
         border: none;
@@ -172,13 +221,13 @@
 
     #volume .ui-slider-handle {
 
-        width: 20px;
-        height: 20px;
+        width: 10px;
+        height: 10px;
         border-radius: 15px;
         background: #FFF;
         position: absolute;
-        margin-left: -8px;
-        margin-top: -8px;
+        margin-left: -3px;
+        margin-top: -3px;
         cursor: pointer;
         outline: none;
     }
@@ -193,7 +242,7 @@
         background-color: #282929;
         color: white;
         font-size: 20px;
-        transition: .5s;
+
     }
 
     .menuBar p {
@@ -201,25 +250,26 @@
         margin-left: 5%;
     }
 
+    #minbar {}
+
     .playlist {
 
         float: left;
         width: 80%;
         height: 85vh;
         background-color: gainsboro;
-        transition: .5s;
+
         overflow: auto;
+        overflow-x: hidden;
     }
 
     #Songcol {}
 
     .collec {
-
-        display: block;
+        display: none;
     }
 
-    #in {
-
+    .info {
         display: none;
     }
 
@@ -228,41 +278,95 @@
 
     }
 
-    .menuBar span {
-        text-align: left;
-        text-indent: 18%;
-        display: block;
+    .menuBar > span {
+
+
+
+        width: 80%;
+        height: 10%;
+
+
+    }
+
+
+
+    .menu {
         width: 100%;
         height: 10%;
         line-height: 50px;
-    }
 
-    .fa-music,
-    .fa-play-circle {
-
-
-        float: left;
-        margin-left: 50px;
-        color: white;
-        margin-top: 20px;
-        transition: 0.5s;
-        width: 20px;
-        position: fixed;
-        left: -30px;
-        margin-top: 1.3%;
+        text-indent: 5%;
+        margin-bottom: 0px;
 
     }
+
+    .menu:hover {
+        background-color: rgb(0, 0, 0, 0.5);
+    }
+
+    #minbar:checked ~ .menuBar {
+        width: 5%;
+    }
+    #minbar:checked ~ .menuBar #title{
+        display: none;
+    }
+     #minbar:checked ~ .menuBar .minicon{
+
+        margin-right: 50%;
+
+    }
+    #minbar:checked ~ .menuBar .menuop{
+        display: none;
+    }
+    #minbar:checked ~.menuBar #searchBox{
+        display: none;
+    }
+    #minbar:checked ~.menuBar .searchButton{
+       width: 100%;
+    }
+    #minbar:checked ~ .menuBar .menu{
+        text-align: center;
+        text-indent: 0px;
+    }
+    #minbar:checked ~ .playlist {
+        width: 95%;
+    }
+
+
+    #collection:checked ~ .menuBar .menu1 {
+        background-color: green;
+    }
+
+    #collection:checked ~ .playlist .collec {
+        display: block;
+    }
+
+    #nowplaying:checked ~ .menuBar .menu2 {
+        background-color: green;
+    }
+
+    #nowplaying:checked ~ .playlist .info {
+        display: block;
+    }
+
+
 
     #title {
-        margin-left: -30px;
-    }
+       margin-left: 15px;
 
+    }
+    .minicon
+{
+    width: 10px;
+     float: right;
+    margin-right: 8%;
+}
     .fa-bars {
 
-        position: fixed;
+
         cursor: pointer;
-        top: 45px;
-        left: 240px;
+
+
 
     }
 
@@ -271,13 +375,6 @@
     }
 
 
-    .unselected:hover {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    .selected {
-        background-color: green;
-    }
 
 
 
@@ -287,7 +384,7 @@
         background-color: gainsboro;
         width: 100%;
         top: 0;
-        display: block;
+
         font-weight: bold;
     }
 
@@ -296,15 +393,15 @@
     }
 
     .col2 {
-        display: block;
-        margin-top: 10%;
+
+        margin-top: 8%;
     }
 
     .musicCard {
         margin-left: 2%;
         margin-bottom: 2%;
         height: 40%;
-        width: 17%;
+        width: 22%;
         display: inline-block;
         border-radius: 5px;
         font-size: 20px;
@@ -312,10 +409,7 @@
         transition: 0.3s;
     }
 
-    .playlist ul li {
-        display: inline-block;
 
-    }
 
     .musicCard:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -360,7 +454,7 @@
 
         text-transform: uppercase;
         font-family: verdana;
-        font-size: 4em;
+        font-size: 3em;
         font-weight: 700;
         color: #01FF70;
         text-shadow: 1px 1px 1px #919191,
@@ -406,14 +500,14 @@
     }
 
     #infoImage {
-        position: relative;
-        left: 5%;
-        top: 25%;
+        position: fixed;
+        left: 22%;
+        top: 22%;
         height: 55%;
-        width: 27.5%;
+        width: 25.5%;
         margin-top: 1vh;
 
-        z-index: 99;
+
 
         background-image: url(images/khalbaliI.jpg);
         background-size: cover;
@@ -484,7 +578,7 @@
 
     .searchTerm {
         display: block;
-        margin-left: 15px;
+        margin-left: 5%;
         width: 70%;
         border: none;
         background: rgb(0, 0, 0, 0.5);
@@ -513,3 +607,174 @@
         background: green;
     }
 
+    @media only screen and (max-width:992px) {
+        .musicCard {
+            width: 40%;
+            margin-left: 45px;
+            margin-bottom: 25px;
+        }
+
+        .col2 {
+
+            margin-top: 13%;
+        }
+        #text
+        {
+            top: 60%;
+            left: 25%;
+          font-size: 2em;
+        }
+      #Artist
+        {
+            top: 68%;
+            left: 55%;
+            font-size: 1.8em;
+        }
+         #infoImage{
+             margin-top: -105px;
+        height: 45%;
+        width: 42.5%;
+        }
+        .menuBar
+        {
+        font-size: 16px;
+        }
+         .thumbnail
+        {
+            margin-left: 10px;
+        }
+        .sname
+        {
+            width: 15%;
+            font-size: 15px;
+        }
+        .volumeSlider
+        {
+            width: 20%;
+        }
+    }
+
+    @media only screen and (max-width:600px) {
+         #minbar:checked ~ .menuBar {
+        width: 10%;
+    }
+ #minbar:checked ~ .playlist {
+        width: 90%;
+    }
+
+        .musicCard {
+            width: 80%;
+
+            margin: 20px 45px;
+        }
+
+        .col2 {
+
+            margin-top: 20%;
+        }
+         #infoImage{
+             margin-top: -85px;
+        height: 45%;
+        width: 47.5%;
+        }
+        #text
+        {
+             top: 55%;
+          font-size: 2em;
+
+        }
+      #Artist
+        {
+            top: 63%;
+            left: 50%;
+            font-size: 1.5em;
+        }
+        .menuop{
+        display: none;
+    }
+        .menu{
+        text-align: center;
+        text-indent: 0px;
+    }
+
+        .sname
+        {
+            width: 15%;
+            font-size: 11px;
+            display: none;
+        }
+        .songImg
+    {
+        display: none;
+    }
+        .progressBar
+        {
+            width: 42%;
+            margin-left: 10px;
+        }
+        .minisname
+        {
+            display: block;
+        }
+        .volumeSlider
+        {
+            width: 48%;
+           position: absolute;
+            right: 5%;
+            top: 7.5vh;
+            display: block;
+            height: 7.5vh;
+
+        }
+        .volumeSlider i {
+
+
+        margin-top: 15px;
+    }
+        .options
+        {
+            height: 7.5vh;
+            display: block;
+           width: 45%;
+            line-height: 7.5vh;
+        }
+        #volume {
+
+        margin-top: 20px;
+            width: 80%;
+            margin-left: 10px;
+    }
+
+    }
+@media only screen and (max-width:500px) {
+
+    .menuBar{
+        width: 25%;
+    }
+    .playlist
+    {
+        width: 75%;
+    }
+    .songImg
+    {
+        display: none;
+    }
+ #infoImage{
+             margin-top: -85px;
+     margin-left: 50px;
+        height: 35%;
+        width: 47.5%;
+        }
+    #Artist
+        {
+
+            font-size: 1.4em;
+        }
+    #text
+        {
+
+          font-size: 1.7em;
+
+        }
+}
+    /*Resize the wrap to see the search bar change!*/

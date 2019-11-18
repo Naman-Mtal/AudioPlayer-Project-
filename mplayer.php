@@ -27,19 +27,22 @@ div.btnbg {
 </style>
 
 <body onload="setVolume(0.5)">
+   <!-- audio player -->
     <audio id="player" src="Songs/PaniDaRang.MP3" ontimeupdate="updateBar()">
-
     </audio>
+    <!-- checkbox and radio button to support minimize functionalit -->
     <input type="checkbox" id="minbar" class="helpers">
     <input type="radio" id="collection" name="options" class="helpers" checked>
     <input type="radio" id="nowplaying" name="options" class="helpers">
+
+    <!-- side menubar -->
     <div class="menuBar">
 
         <br>
         <span id="title">Music</span>
         <label for="minbar" class="minicon"><i class="fa fa-bars" aria-hidden="true"></i></label>
 
-
+        <!-- Search Bar -->
         <div class="search">
             <input type="text" id="searchBox" class="searchTerm" placeholder="Looking for Something?">
             <button type="submit" class="searchButton" onclick="search()">
@@ -48,12 +51,14 @@ div.btnbg {
         </div>
 
         <br>
+        <!-- for toggling menus-->
         <label class="menu menu1" for="collection" id=""><i class="fa fa-music" id="musicIcon" aria-hidden="true"></i>
             <span class="menuop">Collection</span></label><br>
         <label for="nowplaying" class="menu menu2"><i class="fa fa-play-circle" id="musicIcon" aria-hidden="true"></i>
             <span class="menuop">Now Playing</span></label>
 
     </div>
+    <!-- contains all music cards -->
     <div class="playlist">
 
         <div class="collec" id="collec">

@@ -349,7 +349,9 @@ margin-top: 7.5vh;
         display: block;
     }
 
-
+#nowplaying:checked ~ .playlist .info #infoImage{
+        left: 10%;
+    }
 
     #title {
        margin-left: 15px;

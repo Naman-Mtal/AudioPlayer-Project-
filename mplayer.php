@@ -66,7 +66,7 @@ div.btnbg {
                 <h1>Collection</h1>
             </div>
             <div class="col2" id="Songs">
-
+             <!-- fetching songs data from database -->
                 <?php
     $con = mysqli_connect("localhost","root","","musicplayer");
     $sql = "SELECT id,name,song,image,artist from songs order by name";
@@ -94,6 +94,7 @@ div.btnbg {
                 </ul>
             </div>
         </div>
+        <!-- current song design -->
         <div class="info" id="in">
             <canvas id="sakura"></canvas>
 <div class="btnbg">
@@ -107,7 +108,7 @@ div.btnbg {
         </div>
     </div>
 
-
+<!-- music control options -->
     <div class="curr" id="currSong">
 
         <div class="songImg">
@@ -141,6 +142,7 @@ div.btnbg {
 
     </div>
     <script>
+        // volume bar
         $("#volume").slider({
             min: 0,
             max: 100,
@@ -156,7 +158,7 @@ div.btnbg {
         var minimized = false;
         var songCount = document.getElementById('songslist').getAttribute('data-songCount');
         var currSongIndex = 0;
-
+        // play and pause current song
         function playS(x) {
 
             if (audio.paused) {
@@ -175,14 +177,14 @@ div.btnbg {
 
 
         }
-
+       // change volume
         function setVolume(x) {
 
             audio.volume = x;
 
 
         }
-
+        // song progressBar updation
         function updateBar() {
 
 
@@ -210,7 +212,7 @@ div.btnbg {
                 canvas.clearRect(0, 0, 300, 150);
 
         }
-
+        // converting nanoseconds to minute and second
         function convertElapsedTime(inputSeconds) {
             var seconds = Math.floor(inputSeconds % 60)
             if (seconds < 10) {
@@ -219,7 +221,7 @@ div.btnbg {
             var minutes = Math.floor(inputSeconds / 60);
             return minutes + ":" + seconds;
         }
-
+        // enabling and disabling repeatation
         function enablerep(x) {
 
 
@@ -237,7 +239,7 @@ div.btnbg {
 
         }
 
-
+        // muting and unmuting
         function mute(x) {
 
             if (audio.muted) {
@@ -256,7 +258,7 @@ div.btnbg {
 
 
 
-
+       //elapsed time of song played
         function updateTime(event, x) {
 
 
@@ -266,7 +268,7 @@ div.btnbg {
             audio.currentTime = percent * audio.duration;
             x.value = percent / 100;
         }
-
+        // play the song from list
         function playSong(x) {
             currSong = x
             currSongIndex = x.id;
@@ -282,13 +284,13 @@ div.btnbg {
             document.getElementById('currImage').style.backgroundImage = url
             document.getElementById('infoImage').style.backgroundImage = url
         }
-
+        // playing next song
         function nextSong() {
             songCount = document.getElementById('songslist').getAttribute('data-songCount');
             currSongIndex = (currSongIndex % songCount) + 1;
             playSong(document.getElementById(currSongIndex))
         }
-
+        // playing prev song
         function prevSong() {
 
             songCount = document.getElementById('songslist').getAttribute('data-songCount');
@@ -301,7 +303,7 @@ div.btnbg {
 
 
 
-
+        // search functionality
         $("#searchBox").keyup(function() {
 
             //Assigning search box value to javascript variable named as "name".
